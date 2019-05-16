@@ -1,0 +1,2 @@
+class Dex < ApplicationRecord
+end

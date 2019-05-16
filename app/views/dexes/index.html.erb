@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dexes.each do |dex| %>
+      <tr>
+        <td><%= dex.numero %></td>
+        <td><%= link_to 'Show', dex %></td>
+        <td><%= link_to 'Edit', edit_dex_path(dex) %></td>
+        <td><%= link_to 'Destroy', dex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dex', new_dex_path %>
