@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bichos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Desenho</th>
+      <th>Tipo1</th>
+      <th>Tipo2</th>
+      <th>Dex</th>
+      <th>Forma</th>
+      <th>Bio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bichos.each do |bicho| %>
+      <tr>
+        <td><%= bicho.nome %></td>
+        <td><%= bicho.desenho %></td>
+        <td><%= bicho.tipo1 %></td>
+        <td><%= bicho.tipo2 %></td>
+        <td><%= bicho.dex %></td>
+        <td><%= bicho.forma %></td>
+        <td><%= bicho.bio %></td>
+        <td><%= link_to 'Show', bicho %></td>
+        <td><%= link_to 'Edit', edit_bicho_path(bicho) %></td>
+        <td><%= link_to 'Destroy', bicho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bicho', new_bicho_path %>

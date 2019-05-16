@@ -1,0 +1,2 @@
+module BichosHelper
+end

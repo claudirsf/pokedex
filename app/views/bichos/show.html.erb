@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @bicho.nome %>
+</p>
+
+<p>
+  <strong>Desenho:</strong>
+  <%= @bicho.desenho %>
+</p>
+
+<p>
+  <strong>Tipo1:</strong>
+  <%= @bicho.tipo1 %>
+</p>
+
+<p>
+  <strong>Tipo2:</strong>
+  <%= @bicho.tipo2 %>
+</p>
+
+<p>
+  <strong>Dex:</strong>
+  <%= @bicho.dex %>
+</p>
+
+<p>
+  <strong>Forma:</strong>
+  <%= @bicho.forma %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @bicho.bio %>
+</p>
+
+<%= link_to 'Edit', edit_bicho_path(@bicho) %> |
+<%= link_to 'Back', bichos_path %>

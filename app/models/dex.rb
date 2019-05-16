@@ -1,3 +1,3 @@
 class Dex < ApplicationRecord
-    validates_presence_of :nome
+    validates_presence_of :numero
 end

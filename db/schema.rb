@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_081434) do
+ActiveRecord::Schema.define(version: 2019_05_16_214214) do
+
+  create_table "bichos", force: :cascade do |t|
+    t.string "nome"
+    t.string "desenho"
+    t.string "tipo1"
+    t.string "tipo2"
+    t.string "dex"
+    t.string "forma"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dexes", force: :cascade do |t|
     t.string "numero"

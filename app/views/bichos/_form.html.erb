@@ -1,0 +1,56 @@
+<%= form_with(model: bicho, local: true) do |form| %>
+  <% if bicho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bicho.errors.count, "error") %> prohibited this bicho from being saved:</h2>
+
+      <ul>
+      <% bicho.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desenho %>
+    <%= form.text_field :desenho %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo1 %>
+    <%= form.collection_select:tipo_id, Tipo.order(:nome), :id , :nome, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo2 %>
+    <%= form.collection_select:tipo2_id, Tipo2.order(:nome), :id , :nome, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dex %><br />
+    <%= form.collection_select:dex_id, Dex.order(:numero), :id , :numero, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :forma %>
+    <%= form.text_field :forma %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio %>
+  </div>
+  
+
+
+ 
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

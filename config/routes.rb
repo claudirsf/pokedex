@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bichos
   resources :dexes
   resources :tipo2s
   resources :tipos

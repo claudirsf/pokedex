@@ -1,0 +1,2 @@
+class Bicho < ApplicationRecord
+end
