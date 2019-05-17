@@ -17,13 +17,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :desenho %>
-    <%= form.text_field :desenho %>
+    <%= form.label :desenho %><br>
+    <%= form.file_field :desenho %>
   </div>
-
+  
+  
   <div class="field">
     <%= form.label :tipo1 %>
-    <%= form.collection_select:tipo_id, Tipo.order(:nome), :id , :nome, include_blank: true %>
+    <%= form.collection_select:tipo1_id, Tipo1.order(:nome), :id , :nome, include_blank: true %>
   </div>
 
   <div class="field">

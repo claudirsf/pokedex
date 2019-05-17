@@ -1,10 +1,10 @@
-<%= form_with(model: tipo, local: true) do |form| %>
-  <% if tipo.errors.any? %>
+<%= form_with(model: tipo1, local: true) do |form| %>
+  <% if tipo1.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>
+      <h2><%= pluralize(tipo1.errors.count, "error") %> prohibited this tipo1 from being saved:</h2>
 
       <ul>
-      <% tipo.errors.full_messages.each do |message| %>
+      <% tipo1.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
